@@ -1,0 +1,240 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 255, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 500px;
+  width: 90%;
+  padding: 50px 40px;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 255, 0, 0.1) inset;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #00ff00;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  letter-spacing: 8px;
+  font-weight: 400;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(0, 255, 0, 0.6);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.btn {
+  flex: 1;
+  padding: 16px 32px;
+  font-family: 'Ndot 57', monospace;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #00ff00;
+  border: 1px solid rgba(0, 255, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.input-group {
+  margin-bottom: 24px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(0, 255, 0, 0.8);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Ndot 57', monospace;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #00ff00;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: rgba(0, 255, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.1);
+}
+
+.input-group input::placeholder {
+  color: rgba(0, 255, 0, 0.3);
+}
+
+.back-btn {
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  background: transparent;
+  color: rgba(0, 255, 0, 0.7);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 6px;
+  font-family: 'Ndot 57', monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: rgba(0, 255, 0, 0.5);
+  color: #00ff00;
+}
+
+.error {
+  color: #ff4444;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  padding: 12px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.success {
+  color: #00ff00;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  padding: 12px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 6px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.btn {
+  position: relative;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(0, 255, 0, 0.8), 0 0 40px rgba(0, 255, 0, 0.4);
+  }
+}
+
+.title {
+  animation: titleGlow 3s ease-in-out infinite;
+}
