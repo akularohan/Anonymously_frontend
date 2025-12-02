@@ -16,3 +16,9 @@ This is the React + Vite frontend for **Anonymously**, a simple anonymous chat a
 cd frontend
 npm install
 npm run dev
+```
+
+## 🔧 Environment Variables
+Create a .env file:
+VITE_API_URL=<backend-http-url>
+VITE_WS_URL=<backend-ws-url>
