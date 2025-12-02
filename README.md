@@ -20,5 +20,7 @@ npm run dev
 
 ## 🔧 Environment Variables
 Create a .env file:
-VITE_API_URL=<backend-http-url>
-VITE_WS_URL=<backend-ws-url>
+
+VITE_API_URL= backend-http-url
+
+VITE_WS_URL= backend-ws-url 
