@@ -238,3 +238,172 @@
 .title {
   animation: titleGlow 3s ease-in-out infinite;
 }
+
+/* Tips Button */
+.tips-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+  font-family: 'Ndot 57', monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.tips-btn:hover {
+  background: rgba(0, 255, 0, 0.2);
+  border-color: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+/* Tips Modal */
+.tips-modal {
+  background: rgba(15, 15, 15, 0.98);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.tips-modal h3 {
+  color: #00ff00;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.tips-title {
+  color: rgba(0, 255, 0, 0.8);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tips-content {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.tips-content p {
+  margin-bottom: 15px;
+}
+
+.tips-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.tips-content ul li {
+  padding: 8px 0 8px 25px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tips-content ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.tips-note {
+  color: rgba(0, 255, 0, 0.7);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    word-break: break-word;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 30px 20px;
+    width: 95%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .tips-btn {
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .tips-modal {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .tips-modal h3 {
+    font-size: 1.1rem;
+  }
+
+  .tips-title {
+    font-size: 0.9rem;
+  }
+
+  .tips-content {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .container {
+    padding: 25px 15px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
+}
